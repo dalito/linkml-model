@@ -1451,7 +1451,7 @@ slots:
   partial_match:
     domain: pattern_expression
     range: boolean
-    description: if true then the pattern must match the whole string, as if enclosed in ^...$
+    description: if true then the pattern can be a substring, if false then it must match the whole string as if enclosed in ^...$
 
   pattern:
     domain: definition
