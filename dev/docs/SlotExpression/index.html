@@ -338,6 +338,14 @@
 
           SlotExpression --&gt; anonymous_slot_expression : any_of
 
+      SlotExpression : array
+
+          SlotExpression --&gt; array_expression : array
+
+      SlotExpression : bindings
+
+          SlotExpression --&gt; enum_binding : bindings
+
       SlotExpression : enum_range
 
           SlotExpression --&gt; enum_expression : enum_range
@@ -377,6 +385,8 @@
       SlotExpression : minimum_value
 
           SlotExpression --&gt; Anything : minimum_value
+
+      SlotExpression : multivalued
 
       SlotExpression : none_of
 
@@ -447,6 +457,12 @@
 <td>direct</td>
 </tr>
 <tr>
+<td><a href="../bindings/">bindings</a></td>
+<td>0..* <br/> <a href="../EnumBinding/">EnumBinding</a></td>
+<td>A collection of enum bindings that specify how a slot can be bound to a permi...</td>
+<td>direct</td>
+</tr>
+<tr>
 <td><a href="../required/">required</a></td>
 <td>0..1 <br/> <a href="../Boolean/">Boolean</a></td>
 <td>true means that the slot must be present in instances of the class definition</td>
@@ -456,6 +472,12 @@
 <td><a href="../recommended/">recommended</a></td>
 <td>0..1 <br/> <a href="../Boolean/">Boolean</a></td>
 <td>true means that the slot should be present in instances of the class definiti...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../multivalued/">multivalued</a></td>
+<td>0..1 <br/> <a href="../Boolean/">Boolean</a></td>
+<td>true means that slot can have more than one value and should be represented u...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -509,7 +531,7 @@
 <tr>
 <td><a href="../value_presence/">value_presence</a></td>
 <td>0..1 <br/> <a href="../PresenceEnum/">PresenceEnum</a></td>
-<td>if true then a value must be present (for lists there must be at least one va...</td>
+<td>if PRESENT then a value must be present (for lists there must be at least one...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -588,6 +610,12 @@
 <td><a href="../all_of/">all_of</a></td>
 <td>0..* <br/> <a href="../AnonymousSlotExpression/">AnonymousSlotExpression</a></td>
 <td>holds if all of the expressions hold</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../array/">array</a></td>
+<td>0..1 <br/> <a href="../ArrayExpression/">ArrayExpression</a></td>
+<td>coerces the value of the slot into an array and defines the dimensions of tha...</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -682,6 +710,12 @@
 <td>domain</td>
 <td><a href="./">SlotExpression</a></td>
 </tr>
+<tr>
+<td><a href="../ExtraSlotsExpression/">ExtraSlotsExpression</a></td>
+<td><a href="../range_expression/">range_expression</a></td>
+<td>domain</td>
+<td><a href="./">SlotExpression</a></td>
+</tr>
 </tbody>
 </table>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
@@ -721,8 +755,10 @@ slots:
 - range
 - range_expression
 - enum_range
+- bindings
 - required
 - recommended
+- multivalued
 - inlined
 - inlined_as_list
 - minimum_value
@@ -745,6 +781,7 @@ slots:
 - exactly_one_of
 - any_of
 - all_of
+- array
 slot_usage:
   any_of:
     name: any_of
@@ -829,6 +866,8 @@ attributes:
       \  X:\n    S1: Y\n\nimplicitly asserts Y is an instance of C2\n"
     comments:
     - range is underspecified, as not all elements can appear as the range of a slot.
+    - to use a URI or CURIE as the range, create a class with the URI or curie as
+      the class_uri
     in_subset:
     - SpecificationSubset
     - MinimalSubset
@@ -845,6 +884,7 @@ attributes:
     alias: range
     owner: slot_expression
     domain_of:
+    - enum_binding
     - slot_expression
     range: element
   range_expression:
@@ -865,6 +905,7 @@ attributes:
     domain_of:
     - path_expression
     - slot_expression
+    - extra_slots_expression
     range: anonymous_class_expression
   enum_range:
     name: enum_range
@@ -879,6 +920,34 @@ attributes:
     domain_of:
     - slot_expression
     range: enum_expression
+  bindings:
+    name: bindings
+    description: 'A collection of enum bindings that specify how a slot can be bound
+      to a permissible value from an enumeration.
+
+      LinkML provides enums to allow string values to be restricted to one of a set
+      of permissible values (specified statically or dynamically).
+
+      Enum bindings allow enums to be bound to any object, including complex nested
+      objects. For example, given a (generic) class Concept with slots id and label,
+      it may be desirable to restrict the values the id takes on in a given context.
+      For example, a HumanSample class may have a slot for representing sample site,
+      with a range of concept, but the values of that slot may be restricted to concepts
+      from a particular branch of an anatomy ontology.'
+    in_subset:
+    - SpecificationSubset
+    from_schema: https://w3id.org/linkml/meta
+    status: testing
+    rank: 1000
+    domain: element
+    multivalued: true
+    alias: bindings
+    owner: slot_expression
+    domain_of:
+    - schema_definition
+    - slot_expression
+    range: enum_binding
+    inlined: true
   required:
     name: required
     description: true means that the slot must be present in instances of the class
@@ -917,6 +986,24 @@ attributes:
     domain: slot_definition
     inherited: true
     alias: recommended
+    owner: slot_expression
+    domain_of:
+    - slot_expression
+    range: boolean
+  multivalued:
+    name: multivalued
+    description: true means that slot can have more than one value and should be represented
+      using a list or collection structure.
+    in_subset:
+    - SpecificationSubset
+    - MinimalSubset
+    - BasicSubset
+    - ObjectOrientedProfile
+    from_schema: https://w3id.org/linkml/meta
+    rank: 7
+    domain: slot_definition
+    inherited: true
+    alias: multivalued
     owner: slot_expression
     domain_of:
     - slot_expression
@@ -1082,8 +1169,9 @@ attributes:
     range: string
   value_presence:
     name: value_presence
-    description: if true then a value must be present (for lists there must be at
-      least one value). If false then a value must be absent (for lists, must be empty)
+    description: if PRESENT then a value must be present (for lists there must be
+      at least one value). If ABSENT then a value must be absent (for lists, must
+      be empty)
     comments:
     - if set to true this has the same effect as required=true. In contrast, required=false
       allows a value to be present
@@ -1308,6 +1396,20 @@ attributes:
     - slot_expression
     - class_expression
     range: anonymous_slot_expression
+  array:
+    name: array
+    description: coerces the value of the slot into an array and defines the dimensions
+      of that array
+    from_schema: https://w3id.org/linkml/meta
+    status: testing
+    rank: 1000
+    domain: slot_definition
+    inherited: true
+    alias: array
+    owner: slot_expression
+    domain_of:
+    - slot_expression
+    range: array_expression
 
 </code></pre>
 </details>

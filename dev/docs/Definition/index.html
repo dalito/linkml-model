@@ -1064,6 +1064,12 @@
 <td>domain</td>
 <td><a href="./">Definition</a></td>
 </tr>
+<tr>
+<td><a href="../TypeMapping/">TypeMapping</a></td>
+<td><a href="../string_serialization/">string_serialization</a></td>
+<td>domain</td>
+<td><a href="./">Definition</a></td>
+</tr>
 </tbody>
 </table>
 <h2 id="see-also">See Also</h2>
@@ -1152,6 +1158,7 @@ attributes:
     domain_of:
     - definition
     - anonymous_class_expression
+    - permissible_value
     range: definition
   abstract:
     name: abstract
@@ -1213,6 +1220,7 @@ attributes:
     owner: definition
     domain_of:
     - definition
+    - permissible_value
     range: definition
   apply_to:
     name: apply_to
@@ -1264,7 +1272,7 @@ attributes:
 
       Implementations of frameworks may choose to use this property to either (a)
       PARSE: implement automated normalizations by parsing denormalized strings into
-      complex objects (b) GENERARE: implement automated to_string labeling of complex
+      complex objects (b) GENERATE: implement automated to_string labeling of complex
       objects
 
       For example, a Measurement class may have 3 fields: unit, value, and string_value.
@@ -1282,6 +1290,7 @@ attributes:
     owner: definition
     domain_of:
     - definition
+    - type_mapping
     range: string
   name:
     name: name
@@ -1413,6 +1422,7 @@ attributes:
     owner: definition
     domain_of:
     - element
+    - permissible_value
     range: uriorcurie
   instantiates:
     name: instantiates
@@ -1425,6 +1435,7 @@ attributes:
     owner: definition
     domain_of:
     - element
+    - permissible_value
     range: uriorcurie
   extensions:
     name: extensions

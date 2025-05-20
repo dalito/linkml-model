@@ -654,6 +654,11 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="../EnumBinding/">EnumBinding</a></td>
+<td>A binding of a slot or a class to a permissible value from an enumeration</td>
+<td>yes</td>
+</tr>
+<tr>
 <td><a href="../SlotExpression/">SlotExpression</a></td>
 <td>an expression that constrains the range of values a slot can take</td>
 <td>no</td>
@@ -681,6 +686,7 @@
 <h2 id="comments">Comments</h2>
 <ul>
 <li>range is underspecified, as not all elements can appear as the range of a slot.</li>
+<li>to use a URI or CURIE as the range, create a class with the URI or curie as the class_uri</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -696,6 +702,8 @@ description: &quot;defines the type of the object of the slot.  Given the follow
   \ S1: Y\n\nimplicitly asserts Y is an instance of C2\n&quot;
 comments:
 - range is underspecified, as not all elements can appear as the range of a slot.
+- to use a URI or CURIE as the range, create a class with the URI or curie as the
+  class_uri
 in_subset:
 - SpecificationSubset
 - MinimalSubset
@@ -711,6 +719,7 @@ inherited: true
 ifabsent: default_range
 alias: range
 domain_of:
+- enum_binding
 - slot_expression
 range: element
 

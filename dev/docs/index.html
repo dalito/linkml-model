@@ -808,6 +808,10 @@ refer to the official URI for each construct, e.g.
 <td>an element that whose instances are atomic scalar values that can be mapped to primitive types</td>
 </tr>
 <tr>
+<td><a href="EnumBinding/">EnumBinding</a></td>
+<td>A binding of a slot or a class to a permissible value from an enumeration.</td>
+</tr>
+<tr>
 <td><a href="Example/">Example</a></td>
 <td>usage example and description</td>
 </tr>
@@ -838,6 +842,22 @@ refer to the official URI for each construct, e.g.
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Annotation/">Annotation</a></td>
 <td>a tag/value pair with the semantics of OWL Annotation</td>
+</tr>
+<tr>
+<td><a href="ExtraSlotsExpression/">ExtraSlotsExpression</a></td>
+<td>An expression that defines how to handle additional data in an instance of class</td>
+</tr>
+<tr>
+<td>beyond the slots/attributes defined for that class.</td>
+<td></td>
+</tr>
+<tr>
+<td>See <code>extra_slots</code> for usage examples.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td><a href="ImportExpression/">ImportExpression</a></td>
@@ -878,6 +898,10 @@ refer to the official URI for each construct, e.g.
 <tr>
 <td><a href="StructuredAlias/">StructuredAlias</a></td>
 <td>object that contains meta data about a synonym or alias including where it came from (source) and its scope (narrow, broad, etc.)</td>
+</tr>
+<tr>
+<td><a href="TypeMapping/">TypeMapping</a></td>
+<td>Represents how a slot or type can be serialized to a format.</td>
 </tr>
 <tr>
 <td><a href="UniqueKey/">UniqueKey</a></td>
@@ -1199,6 +1223,10 @@ refer to the official URI for each construct, e.g.
 <td>The relationship between an element and its alias</td>
 </tr>
 <tr>
+<td><a href="alias_contexts/">alias_contexts</a></td>
+<td>The context in which an alias should be applied</td>
+</tr>
+<tr>
 <td><a href="in_language/">in_language</a></td>
 <td>the primary language used in the sources</td>
 </tr>
@@ -1407,6 +1435,14 @@ refer to the official URI for each construct, e.g.
 <td>if true then induced/mangled slot names are not created for class_usage and a...</td>
 </tr>
 <tr>
+<td><a href="extra_slots/">extra_slots</a></td>
+<td>How a class instance handles extra data not specified in the class definition</td>
+</tr>
+<tr>
+<td><a href="allowed/">allowed</a></td>
+<td>Whether or not something is allowed</td>
+</tr>
+<tr>
 <td><a href="domain/">domain</a></td>
 <td>defines the type of the subject of the slot</td>
 </tr>
@@ -1460,7 +1496,7 @@ refer to the official URI for each construct, e.g.
 </tr>
 <tr>
 <td><a href="value_presence/">value_presence</a></td>
-<td>if true then a value must be present (for lists there must be at least one va...</td>
+<td>if PRESENT then a value must be present (for lists there must be at least one...</td>
 </tr>
 <tr>
 <td><a href="equals_string/">equals_string</a></td>
@@ -1633,6 +1669,30 @@ refer to the official URI for each construct, e.g.
 <tr>
 <td><a href="string_serialization/">string_serialization</a></td>
 <td>Used on a slot that stores the string serialization of the containing object</td>
+</tr>
+<tr>
+<td><a href="bindings/">bindings</a></td>
+<td>A collection of enum bindings that specify how a slot can be bound to a permi...</td>
+</tr>
+<tr>
+<td><a href="binds_value_of/">binds_value_of</a></td>
+<td>A path to a slot that is being bound to a permissible value from an enumerati...</td>
+</tr>
+<tr>
+<td><a href="obligation_level/">obligation_level</a></td>
+<td>The level of obligation or recommendation strength for a metadata element</td>
+</tr>
+<tr>
+<td><a href="type_mappings/">type_mappings</a></td>
+<td>A collection of type mappings that specify how a slot's range should be mappe...</td>
+</tr>
+<tr>
+<td><a href="framework_key/">framework_key</a></td>
+<td>The name of a format that can be used to serialize LinkML data</td>
+</tr>
+<tr>
+<td><a href="mapped_type/">mapped_type</a></td>
+<td>type to coerce to</td>
 </tr>
 <tr>
 <td><a href="alt_description_text/">alt_description_text</a></td>
@@ -1828,6 +1888,10 @@ refer to the official URI for each construct, e.g.
 <tr>
 <td><a href="AliasPredicateEnum/">AliasPredicateEnum</a></td>
 <td>permissible values for the relationship between an element and an alias</td>
+</tr>
+<tr>
+<td><a href="ObligationLevelEnum/">ObligationLevelEnum</a></td>
+<td>The level of obligation or recommendation strength for a metadata element</td>
 </tr>
 <tr>
 <td><a href="PresenceEnum/">PresenceEnum</a></td>
