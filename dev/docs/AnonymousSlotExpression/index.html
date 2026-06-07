@@ -491,6 +491,7 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-anonymousslotexpression">Class: AnonymousSlotExpression</h1>
+<div>
 <p>URI: <a href="https://w3id.org/linkml/AnonymousSlotExpression">linkml:AnonymousSlotExpression</a></p>
 <div class="mermaid"> classDiagram
     class AnonymousSlotExpression
@@ -1433,7 +1434,6 @@ attributes:
     domain: slot_definition
     inherited: true
     ifabsent: default_range
-    alias: range
     owner: anonymous_slot_expression
     domain_of:
     - enum_binding
@@ -1452,7 +1452,6 @@ attributes:
     status: testing
     rank: 1000
     domain: slot_expression
-    alias: range_expression
     owner: anonymous_slot_expression
     domain_of:
     - path_expression
@@ -1467,7 +1466,6 @@ attributes:
     from_schema: https://w3id.org/linkml/meta
     status: testing
     rank: 1000
-    alias: enum_range
     owner: anonymous_slot_expression
     domain_of:
     - slot_expression
@@ -1492,7 +1490,6 @@ attributes:
     status: testing
     rank: 1000
     domain: element
-    alias: bindings
     owner: anonymous_slot_expression
     domain_of:
     - schema_definition
@@ -1514,7 +1511,6 @@ attributes:
     rank: 8
     domain: slot_definition
     inherited: true
-    alias: required
     owner: anonymous_slot_expression
     domain_of:
     - slot_expression
@@ -1537,7 +1533,6 @@ attributes:
     rank: 9
     domain: slot_definition
     inherited: true
-    alias: recommended
     owner: anonymous_slot_expression
     domain_of:
     - slot_expression
@@ -1555,7 +1550,6 @@ attributes:
     rank: 7
     domain: slot_definition
     inherited: true
-    alias: multivalued
     owner: anonymous_slot_expression
     domain_of:
     - slot_expression
@@ -1578,7 +1572,6 @@ attributes:
     rank: 25
     domain: slot_definition
     inherited: true
-    alias: inlined
     owner: anonymous_slot_expression
     domain_of:
     - slot_expression
@@ -1610,7 +1603,6 @@ attributes:
     rank: 27
     domain: slot_definition
     inherited: true
-    alias: inlined_as_list
     owner: anonymous_slot_expression
     domain_of:
     - slot_expression
@@ -1629,7 +1621,6 @@ attributes:
     rank: 1000
     domain: slot_definition
     inherited: true
-    alias: minimum_value
     owner: anonymous_slot_expression
     domain_of:
     - type_expression
@@ -1649,7 +1640,6 @@ attributes:
     rank: 1000
     domain: slot_definition
     inherited: true
-    alias: maximum_value
     owner: anonymous_slot_expression
     domain_of:
     - type_expression
@@ -1666,7 +1656,6 @@ attributes:
     rank: 35
     domain: definition
     inherited: true
-    alias: pattern
     owner: anonymous_slot_expression
     domain_of:
     - type_expression
@@ -1684,7 +1673,6 @@ attributes:
     rank: 1000
     domain: definition
     inherited: true
-    alias: structured_pattern
     owner: anonymous_slot_expression
     domain_of:
     - type_expression
@@ -1696,7 +1684,6 @@ attributes:
     from_schema: https://w3id.org/linkml/meta
     rank: 1000
     slot_uri: qudt:unit
-    alias: unit
     owner: anonymous_slot_expression
     domain_of:
     - type_expression
@@ -1713,7 +1700,6 @@ attributes:
     status: testing
     rank: 1000
     domain: slot_expression
-    alias: implicit_prefix
     owner: anonymous_slot_expression
     domain_of:
     - type_expression
@@ -1733,7 +1719,6 @@ attributes:
     is_a: list_value_specification_constant
     domain: slot_definition
     inherited: true
-    alias: value_presence
     owner: anonymous_slot_expression
     domain_of:
     - slot_expression
@@ -1748,7 +1733,6 @@ attributes:
     rank: 1000
     is_a: list_value_specification_constant
     inherited: true
-    alias: equals_string
     owner: anonymous_slot_expression
     domain_of:
     - type_expression
@@ -1765,7 +1749,6 @@ attributes:
     rank: 1000
     is_a: list_value_specification_constant
     inherited: true
-    alias: equals_string_in
     owner: anonymous_slot_expression
     domain_of:
     - type_expression
@@ -1781,7 +1764,6 @@ attributes:
     rank: 1000
     is_a: list_value_specification_constant
     inherited: true
-    alias: equals_number
     owner: anonymous_slot_expression
     domain_of:
     - type_expression
@@ -1801,7 +1783,6 @@ attributes:
     rank: 1000
     is_a: list_value_specification_constant
     inherited: true
-    alias: equals_expression
     owner: anonymous_slot_expression
     domain_of:
     - slot_expression
@@ -1818,7 +1799,6 @@ attributes:
     rank: 1000
     is_a: list_value_specification_constant
     inherited: true
-    alias: exact_cardinality
     owner: anonymous_slot_expression
     domain_of:
     - slot_expression
@@ -1835,7 +1815,6 @@ attributes:
     rank: 1000
     is_a: list_value_specification_constant
     inherited: true
-    alias: minimum_cardinality
     owner: anonymous_slot_expression
     domain_of:
     - slot_expression
@@ -1852,7 +1831,6 @@ attributes:
     rank: 1000
     is_a: list_value_specification_constant
     inherited: true
-    alias: maximum_cardinality
     owner: anonymous_slot_expression
     domain_of:
     - slot_expression
@@ -1868,7 +1846,6 @@ attributes:
     status: testing
     rank: 1000
     is_a: list_value_specification_constant
-    alias: has_member
     owner: anonymous_slot_expression
     domain_of:
     - slot_expression
@@ -1883,7 +1860,6 @@ attributes:
     status: testing
     rank: 1000
     is_a: list_value_specification_constant
-    alias: all_members
     owner: anonymous_slot_expression
     domain_of:
     - slot_expression
@@ -1900,7 +1876,6 @@ attributes:
     - sh:not
     rank: 105
     is_a: boolean_slot
-    alias: none_of
     owner: anonymous_slot_expression
     domain_of:
     - type_expression
@@ -1921,7 +1896,6 @@ attributes:
     - sh:xone
     rank: 103
     is_a: boolean_slot
-    alias: exactly_one_of
     owner: anonymous_slot_expression
     domain_of:
     - type_expression
@@ -1942,7 +1916,6 @@ attributes:
     - sh:or
     rank: 101
     is_a: boolean_slot
-    alias: any_of
     owner: anonymous_slot_expression
     domain_of:
     - type_expression
@@ -1963,7 +1936,6 @@ attributes:
     - sh:and
     rank: 107
     is_a: boolean_slot
-    alias: all_of
     owner: anonymous_slot_expression
     domain_of:
     - type_expression
@@ -1981,7 +1953,6 @@ attributes:
     rank: 1000
     domain: slot_definition
     inherited: true
-    alias: array
     owner: anonymous_slot_expression
     domain_of:
     - slot_expression
@@ -1992,7 +1963,6 @@ attributes:
     from_schema: https://w3id.org/linkml/meta
     rank: 1000
     domain: extensible
-    alias: extensions
     owner: anonymous_slot_expression
     domain_of:
     - extension
@@ -2007,7 +1977,6 @@ attributes:
     rank: 1000
     is_a: extensions
     domain: annotatable
-    alias: annotations
     owner: anonymous_slot_expression
     domain_of:
     - annotatable
@@ -2029,7 +1998,6 @@ attributes:
     rank: 5
     domain: element
     slot_uri: skos:definition
-    alias: description
     owner: anonymous_slot_expression
     domain_of:
     - common_metadata
@@ -2046,7 +2014,6 @@ attributes:
     - alternate definitions
     rank: 1000
     domain: element
-    alias: alt_descriptions
     owner: anonymous_slot_expression
     domain_of:
     - common_metadata
@@ -2065,7 +2032,6 @@ attributes:
     rank: 3
     domain: element
     slot_uri: dcterms:title
-    alias: title
     owner: anonymous_slot_expression
     domain_of:
     - common_metadata
@@ -2083,7 +2049,6 @@ attributes:
     - owl:deprecated
     rank: 1000
     domain: element
-    alias: deprecated
     owner: anonymous_slot_expression
     domain_of:
     - common_metadata
@@ -2096,7 +2061,6 @@ attributes:
     from_schema: https://w3id.org/linkml/meta
     rank: 1000
     domain: element
-    alias: todos
     owner: anonymous_slot_expression
     domain_of:
     - common_metadata
@@ -2112,7 +2076,6 @@ attributes:
     rank: 1000
     domain: element
     slot_uri: skos:editorialNote
-    alias: notes
     owner: anonymous_slot_expression
     domain_of:
     - common_metadata
@@ -2130,7 +2093,6 @@ attributes:
     rank: 1000
     domain: element
     slot_uri: skos:note
-    alias: comments
     owner: anonymous_slot_expression
     domain_of:
     - common_metadata
@@ -2147,7 +2109,6 @@ attributes:
     rank: 1000
     singular_name: example
     domain: element
-    alias: examples
     owner: anonymous_slot_expression
     domain_of:
     - common_metadata
@@ -2167,7 +2128,6 @@ attributes:
     rank: 1000
     domain: element
     slot_uri: OIO:inSubset
-    alias: in_subset
     owner: anonymous_slot_expression
     domain_of:
     - common_metadata
@@ -2186,7 +2146,6 @@ attributes:
     domain: element
     slot_uri: skos:inScheme
     readonly: supplied by the schema loader or schema view
-    alias: from_schema
     owner: anonymous_slot_expression
     domain_of:
     - common_metadata
@@ -2199,7 +2158,6 @@ attributes:
     rank: 1000
     domain: element
     readonly: supplied by the schema loader or schema view
-    alias: imported_from
     owner: anonymous_slot_expression
     domain_of:
     - common_metadata
@@ -2222,7 +2180,6 @@ attributes:
     rank: 1000
     domain: element
     slot_uri: dcterms:source
-    alias: source
     owner: anonymous_slot_expression
     domain_of:
     - common_metadata
@@ -2236,7 +2193,6 @@ attributes:
     from_schema: https://w3id.org/linkml/meta
     rank: 1000
     slot_uri: schema:inLanguage
-    alias: in_language
     owner: anonymous_slot_expression
     domain_of:
     - common_metadata
@@ -2250,7 +2206,6 @@ attributes:
     rank: 1000
     domain: element
     slot_uri: rdfs:seeAlso
-    alias: see_also
     owner: anonymous_slot_expression
     domain_of:
     - common_metadata
@@ -2301,7 +2256,6 @@ attributes:
     rank: 1000
     domain: element
     slot_uri: skos:altLabel
-    alias: aliases
     owner: anonymous_slot_expression
     domain_of:
     - common_metadata
@@ -2316,7 +2270,6 @@ attributes:
     - linkml:aliases
     rank: 1000
     slot_uri: skosxl:altLabel
-    alias: structured_aliases
     owner: anonymous_slot_expression
     domain_of:
     - common_metadata
@@ -2337,7 +2290,6 @@ attributes:
     - alternate ids
     rank: 1000
     slot_uri: skos:mappingRelation
-    alias: mappings
     owner: anonymous_slot_expression
     domain_of:
     - common_metadata
@@ -2428,7 +2380,6 @@ attributes:
     rank: 1000
     domain: element
     slot_uri: pav:createdBy
-    alias: created_by
     owner: anonymous_slot_expression
     domain_of:
     - common_metadata
@@ -2442,7 +2393,6 @@ attributes:
     rank: 1000
     domain: element
     slot_uri: dcterms:contributor
-    alias: contributors
     owner: anonymous_slot_expression
     domain_of:
     - common_metadata
@@ -2457,7 +2407,6 @@ attributes:
     rank: 1000
     domain: element
     slot_uri: pav:createdOn
-    alias: created_on
     owner: anonymous_slot_expression
     domain_of:
     - common_metadata
@@ -2471,7 +2420,6 @@ attributes:
     rank: 1000
     domain: element
     slot_uri: pav:lastUpdatedOn
-    alias: last_updated_on
     owner: anonymous_slot_expression
     domain_of:
     - common_metadata
@@ -2485,7 +2433,6 @@ attributes:
     rank: 1000
     domain: element
     slot_uri: oslc:modifiedBy
-    alias: modified_by
     owner: anonymous_slot_expression
     domain_of:
     - common_metadata
@@ -2506,7 +2453,6 @@ attributes:
     rank: 1000
     domain: element
     slot_uri: bibo:status
-    alias: status
     owner: anonymous_slot_expression
     domain_of:
     - common_metadata
@@ -2530,7 +2476,6 @@ attributes:
     - qb:order
     rank: 51
     slot_uri: sh:order
-    alias: rank
     owner: anonymous_slot_expression
     domain_of:
     - common_metadata
@@ -2548,7 +2493,6 @@ attributes:
     rank: 1000
     singular_name: category
     slot_uri: dcterms:subject
-    alias: categories
     owner: anonymous_slot_expression
     domain_of:
     - common_metadata
@@ -2565,7 +2509,6 @@ attributes:
     singular_name: keyword
     domain: element
     slot_uri: schema:keywords
-    alias: keywords
     owner: anonymous_slot_expression
     domain_of:
     - common_metadata
@@ -2574,6 +2517,7 @@ attributes:
 
 </code></pre>
 </details>
+</div>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

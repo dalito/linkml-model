@@ -492,6 +492,7 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-extension">Class: Extension</h1>
 <p><em>a tag/value pair used to add non-model information to an entry</em></p>
+<div>
 <p>URI: <a href="https://w3id.org/linkml/Extension">linkml:Extension</a></p>
 <div class="mermaid"> classDiagram
     class Extension
@@ -809,10 +810,6 @@ attributes:
     required: true
   extension_value:
     name: extension_value
-    annotations:
-      simple_dict_value:
-        tag: simple_dict_value
-        value: true
     description: the actual annotation
     from_schema: https://w3id.org/linkml/meta
     rank: 1000
@@ -829,7 +826,6 @@ attributes:
     from_schema: https://w3id.org/linkml/meta
     rank: 1000
     domain: extensible
-    alias: extensions
     owner: extension
     domain_of:
     - extension
@@ -840,6 +836,7 @@ attributes:
 
 </code></pre>
 </details>
+</div>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

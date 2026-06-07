@@ -1015,8 +1015,8 @@
 
 <h1 id="slot-equals_string_in">Slot: equals_string_in</h1>
 <p><em>the slot must have range string and the value of the slot must equal one of the specified values</em></p>
-<p>URI: <a href="https://w3id.org/linkml/equals_string_in">linkml:equals_string_in</a>
-Alias: equals_string_in</p>
+<div>
+<p>URI: <a href="https://w3id.org/linkml/equals_string_in">linkml:equals_string_in</a></p>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../list_value_specification_constant/">list_value_specification_constant</a><ul>
@@ -1040,6 +1040,11 @@ Alias: equals_string_in</p>
 <td>no</td>
 </tr>
 <tr>
+<td><a href="../SlotExpression/">SlotExpression</a></td>
+<td>an expression that constrains the range of values a slot can take</td>
+<td>no</td>
+</tr>
+<tr>
 <td><a href="../AnonymousTypeExpression/">AnonymousTypeExpression</a></td>
 <td>A type expression that is not a top-level named type definition</td>
 <td>no</td>
@@ -1052,11 +1057,6 @@ Alias: equals_string_in</p>
 <tr>
 <td><a href="../AnonymousSlotExpression/">AnonymousSlotExpression</a></td>
 <td></td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../SlotExpression/">SlotExpression</a></td>
-<td>an expression that constrains the range of values a slot can take</td>
 <td>no</td>
 </tr>
 <tr>
@@ -1162,7 +1162,6 @@ status: testing
 rank: 1000
 is_a: list_value_specification_constant
 inherited: true
-alias: equals_string_in
 domain_of:
 - type_expression
 - slot_expression
@@ -1172,12 +1171,16 @@ multivalued: true
 </code></pre>
 
 </details>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 

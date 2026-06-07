@@ -501,6 +501,7 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-prefix">Class: Prefix</h1>
 <p><em>prefix URI tuple</em></p>
+<div>
 <p>URI: <a href="https://w3id.org/linkml/Prefix">linkml:Prefix</a></p>
 <div class="mermaid"> classDiagram
     class Prefix
@@ -525,7 +526,7 @@
 <tbody>
 <tr>
 <td><a href="../prefix_prefix/">prefix_prefix</a></td>
-<td>0..1 <br/> <a href="../Ncname/">Ncname</a></td>
+<td>1 <br/> <a href="../Ncname/">Ncname</a></td>
 <td>The prefix components of a prefix expansions</td>
 <td>direct</td>
 </tr>
@@ -638,7 +639,6 @@ attributes:
     domain: prefix
     slot_uri: sh:prefix
     key: true
-    alias: prefix_prefix
     owner: prefix
     domain_of:
     - prefix
@@ -654,7 +654,6 @@ attributes:
     rank: 2
     domain: prefix
     slot_uri: sh:namespace
-    alias: prefix_reference
     owner: prefix
     domain_of:
     - prefix
@@ -663,6 +662,7 @@ attributes:
 
 </code></pre>
 </details>
+</div>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

@@ -492,6 +492,7 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-unitofmeasure">Class: UnitOfMeasure</h1>
 <p><em>A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for  measuring other quantities the same kind (more generally of equivalent dimension).</em></p>
+<div>
 <p>URI: <a href="http://qudt.org/schema/qudt/Unit">qudt:Unit</a></p>
 <div class="mermaid"> classDiagram
     class UnitOfMeasure
@@ -762,7 +763,6 @@ attributes:
     from_schema: https://w3id.org/linkml/meta
     rank: 1000
     slot_uri: qudt:symbol
-    alias: symbol
     owner: UnitOfMeasure
     domain_of:
     - UnitOfMeasure
@@ -777,7 +777,6 @@ attributes:
     from_schema: https://w3id.org/linkml/meta
     rank: 1000
     slot_uri: qudt:abbreviation
-    alias: abbreviation
     owner: UnitOfMeasure
     domain_of:
     - UnitOfMeasure
@@ -788,7 +787,6 @@ attributes:
     from_schema: https://w3id.org/linkml/meta
     rank: 1000
     slot_uri: rdfs:label
-    alias: descriptive_name
     owner: UnitOfMeasure
     domain_of:
     - UnitOfMeasure
@@ -818,7 +816,6 @@ attributes:
     rank: 1000
     domain: UnitOfMeasure
     slot_uri: qudt:ucumCode
-    alias: ucum_code
     owner: UnitOfMeasure
     domain_of:
     - UnitOfMeasure
@@ -829,7 +826,6 @@ attributes:
     description: Expression for deriving this unit from other units
     from_schema: https://w3id.org/linkml/meta
     rank: 1000
-    alias: derivation
     owner: UnitOfMeasure
     domain_of:
     - UnitOfMeasure
@@ -843,7 +839,6 @@ attributes:
     from_schema: https://w3id.org/linkml/meta
     rank: 1000
     slot_uri: qudt:hasQuantityKind
-    alias: has_quantity_kind
     owner: UnitOfMeasure
     domain_of:
     - UnitOfMeasure
@@ -853,7 +848,6 @@ attributes:
     from_schema: https://w3id.org/linkml/meta
     rank: 1000
     slot_uri: qudt:iec61360Code
-    alias: iec61360code
     owner: UnitOfMeasure
     domain_of:
     - UnitOfMeasure
@@ -879,6 +873,7 @@ any_of:
 
 </code></pre>
 </details>
+</div>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

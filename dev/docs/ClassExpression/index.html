@@ -501,6 +501,7 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-classexpression">Class: ClassExpression</h1>
 <p><em>A boolean expression that can be used to dynamically determine membership of a class</em></p>
+<div>
 <p>URI: <a href="https://w3id.org/linkml/ClassExpression">linkml:ClassExpression</a></p>
 <div class="mermaid"> classDiagram
     class ClassExpression
@@ -764,7 +765,6 @@ attributes:
     - sh:or
     rank: 101
     is_a: boolean_slot
-    alias: any_of
     owner: class_expression
     domain_of:
     - type_expression
@@ -785,7 +785,6 @@ attributes:
     - sh:xone
     rank: 103
     is_a: boolean_slot
-    alias: exactly_one_of
     owner: class_expression
     domain_of:
     - type_expression
@@ -806,7 +805,6 @@ attributes:
     - sh:not
     rank: 105
     is_a: boolean_slot
-    alias: none_of
     owner: class_expression
     domain_of:
     - type_expression
@@ -827,7 +825,6 @@ attributes:
     - sh:and
     rank: 107
     is_a: boolean_slot
-    alias: all_of
     owner: class_expression
     domain_of:
     - type_expression
@@ -844,7 +841,6 @@ attributes:
     from_schema: https://w3id.org/linkml/meta
     rank: 1000
     domain: class_expression
-    alias: slot_conditions
     owner: class_expression
     domain_of:
     - class_expression
@@ -854,6 +850,7 @@ attributes:
 
 </code></pre>
 </details>
+</div>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

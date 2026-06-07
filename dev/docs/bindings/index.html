@@ -1006,10 +1006,9 @@
 <p><em>A collection of enum bindings that specify how a slot can be bound to a permissible value from an enumeration.</em></p>
 <p><em>LinkML provides enums to allow string values to be restricted to one of a set of permissible values (specified statically or dynamically).</em></p>
 <p><em>Enum bindings allow enums to be bound to any object, including complex nested objects. For example, given a (generic) class Concept with slots id and label, it may be desirable to restrict the values the id takes on in a given context. For example, a HumanSample class may have a slot for representing sample site, with a range of concept, but the values of that slot may be restricted to concepts from a particular branch of an anatomy ontology.</em></p>
-<p>URI: <a href="https://w3id.org/linkml/bindings">linkml:bindings</a>
-Alias: bindings</p>
+<div>
+<p>URI: <a href="https://w3id.org/linkml/bindings">linkml:bindings</a></p>
 <!-- no inheritance hierarchy -->
-
 <h2 id="applicable-classes">Applicable Classes</h2>
 <table>
 <thead>
@@ -1021,13 +1020,8 @@ Alias: bindings</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../SlotDefinition/">SlotDefinition</a></td>
-<td>an element that describes how instances are related to other instances</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../AnonymousSlotExpression/">AnonymousSlotExpression</a></td>
-<td></td>
+<td><a href="../SchemaDefinition/">SchemaDefinition</a></td>
+<td>A collection of definitions that make up a schema or a data model</td>
 <td>no</td>
 </tr>
 <tr>
@@ -1036,8 +1030,13 @@ Alias: bindings</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../SchemaDefinition/">SchemaDefinition</a></td>
-<td>A collection of definitions that make up a schema or a data model</td>
+<td><a href="../AnonymousSlotExpression/">AnonymousSlotExpression</a></td>
+<td></td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../SlotDefinition/">SlotDefinition</a></td>
+<td>an element that describes how instances are related to other instances</td>
 <td>no</td>
 </tr>
 </tbody>
@@ -1133,7 +1132,6 @@ from_schema: https://w3id.org/linkml/meta
 status: testing
 rank: 1000
 domain: element
-alias: bindings
 domain_of:
 - schema_definition
 - slot_expression
@@ -1144,12 +1142,16 @@ inlined: true
 </code></pre>
 
 </details>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 

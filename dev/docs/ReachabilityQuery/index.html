@@ -492,6 +492,7 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-reachabilityquery">Class: ReachabilityQuery</h1>
 <p><em>A query that is used on an enum expression to dynamically obtain a set of permissible values via walking from a set of source nodes to a set of descendants or ancestors over a set of relationship types.</em></p>
+<div>
 <p>URI: <a href="https://w3id.org/linkml/ReachabilityQuery">linkml:ReachabilityQuery</a></p>
 <div class="mermaid"> classDiagram
     class ReachabilityQuery
@@ -694,7 +695,6 @@ attributes:
     - terminology
     - vocabulary
     rank: 1000
-    alias: source_ontology
     owner: reachability_query
     domain_of:
     - match_query
@@ -708,7 +708,6 @@ attributes:
     from_schema: https://w3id.org/linkml/meta
     rank: 1000
     domain: reachability_query
-    alias: source_nodes
     owner: reachability_query
     domain_of:
     - reachability_query
@@ -726,7 +725,6 @@ attributes:
     - properties
     rank: 1000
     domain: reachability_query
-    alias: relationship_types
     owner: reachability_query
     domain_of:
     - reachability_query
@@ -743,7 +741,6 @@ attributes:
     - non-transitive
     rank: 1000
     domain: reachability_query
-    alias: is_direct
     owner: reachability_query
     domain_of:
     - reachability_query
@@ -758,7 +755,6 @@ attributes:
     - reflexive
     rank: 1000
     domain: reachability_query
-    alias: include_self
     owner: reachability_query
     domain_of:
     - reachability_query
@@ -774,7 +770,6 @@ attributes:
     - ancestors
     rank: 1000
     domain: reachability_query
-    alias: traverse_up
     owner: reachability_query
     domain_of:
     - reachability_query
@@ -782,6 +777,7 @@ attributes:
 
 </code></pre>
 </details>
+</div>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

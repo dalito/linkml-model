@@ -492,6 +492,7 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-annotation">Class: Annotation</h1>
 <p><em>a tag/value pair with the semantics of OWL Annotation</em></p>
+<div>
 <p>URI: <a href="https://w3id.org/linkml/Annotation">linkml:Annotation</a></p>
 <div class="mermaid"> classDiagram
     class Annotation
@@ -794,7 +795,6 @@ attributes:
     rank: 1000
     is_a: extensions
     domain: annotatable
-    alias: annotations
     owner: annotation
     domain_of:
     - annotatable
@@ -817,10 +817,6 @@ attributes:
     required: true
   extension_value:
     name: extension_value
-    annotations:
-      simple_dict_value:
-        tag: simple_dict_value
-        value: true
     description: the actual annotation
     from_schema: https://w3id.org/linkml/meta
     rank: 1000
@@ -837,7 +833,6 @@ attributes:
     from_schema: https://w3id.org/linkml/meta
     rank: 1000
     domain: extensible
-    alias: extensions
     owner: annotation
     domain_of:
     - extension
@@ -848,6 +843,7 @@ attributes:
 
 </code></pre>
 </details>
+</div>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

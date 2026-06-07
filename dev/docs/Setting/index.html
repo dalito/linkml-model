@@ -492,6 +492,7 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-setting">Class: Setting</h1>
 <p><em>assignment of a key to a value</em></p>
+<div>
 <p>URI: <a href="https://w3id.org/linkml/Setting">linkml:Setting</a></p>
 <div class="mermaid"> classDiagram
     class Setting
@@ -516,7 +517,7 @@
 <tbody>
 <tr>
 <td><a href="../setting_key/">setting_key</a></td>
-<td>0..1 <br/> <a href="../Ncname/">Ncname</a></td>
+<td>1 <br/> <a href="../Ncname/">Ncname</a></td>
 <td>the variable name for a setting</td>
 <td>direct</td>
 </tr>
@@ -625,7 +626,6 @@ attributes:
     rank: 1000
     domain: setting
     key: true
-    alias: setting_key
     owner: setting
     domain_of:
     - setting
@@ -639,7 +639,6 @@ attributes:
     from_schema: https://w3id.org/linkml/meta
     rank: 1000
     domain: setting
-    alias: setting_value
     owner: setting
     domain_of:
     - setting
@@ -648,6 +647,7 @@ attributes:
 
 </code></pre>
 </details>
+</div>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

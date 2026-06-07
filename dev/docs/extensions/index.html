@@ -993,8 +993,8 @@
 
 <h1 id="slot-extensions">Slot: extensions</h1>
 <p><em>a tag/text tuple attached to an arbitrary element</em></p>
-<p>URI: <a href="https://w3id.org/linkml/extensions">linkml:extensions</a>
-Alias: extensions</p>
+<div>
+<p>URI: <a href="https://w3id.org/linkml/extensions">linkml:extensions</a></p>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><strong>extensions</strong><ul>
@@ -1013,8 +1013,18 @@ Alias: extensions</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../AnonymousSlotExpression/">AnonymousSlotExpression</a></td>
-<td></td>
+<td><a href="../Extension/">Extension</a></td>
+<td>a tag/value pair used to add non-model information to an entry</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Extensible/">Extensible</a></td>
+<td>mixin for classes that support extension</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Element/">Element</a></td>
+<td>A named element in the model</td>
 <td>no</td>
 </tr>
 <tr>
@@ -1023,18 +1033,13 @@ Alias: extensions</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../PathExpression/">PathExpression</a></td>
-<td>An expression that describes an abstract path from an object to another throu...</td>
+<td><a href="../TypeDefinition/">TypeDefinition</a></td>
+<td>an element that whose instances are atomic scalar values that can be mapped t...</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../PatternExpression/">PatternExpression</a></td>
-<td>a regular expression pattern used to evaluate conformance of a string</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../UniqueKey/">UniqueKey</a></td>
-<td>a collection of slots whose values uniquely identify an instance of a class</td>
+<td><a href="../SubsetDefinition/">SubsetDefinition</a></td>
+<td>an element that can be used to group other metamodel elements</td>
 <td>no</td>
 </tr>
 <tr>
@@ -1048,13 +1053,38 @@ Alias: extensions</p>
 <td>no</td>
 </tr>
 <tr>
+<td><a href="../EnumBinding/">EnumBinding</a></td>
+<td>A binding of a slot or a class to a permissible value from an enumeration</td>
+<td>no</td>
+</tr>
+<tr>
 <td><a href="../StructuredAlias/">StructuredAlias</a></td>
 <td>object that contains meta data about a synonym or alias including where it ca...</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../ArrayExpression/">ArrayExpression</a></td>
-<td>defines the dimensions of an array</td>
+<td><a href="../AnonymousExpression/">AnonymousExpression</a></td>
+<td>An abstract parent class for any nested expression</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../PathExpression/">PathExpression</a></td>
+<td>An expression that describes an abstract path from an object to another throu...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../AnonymousSlotExpression/">AnonymousSlotExpression</a></td>
+<td></td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../SlotDefinition/">SlotDefinition</a></td>
+<td>an element that describes how instances are related to other instances</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../AnonymousClassExpression/">AnonymousClassExpression</a></td>
+<td></td>
 <td>no</td>
 </tr>
 <tr>
@@ -1063,18 +1093,38 @@ Alias: extensions</p>
 <td>no</td>
 </tr>
 <tr>
+<td><a href="../ClassRule/">ClassRule</a></td>
+<td>A rule that applies to instances of a class</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../ArrayExpression/">ArrayExpression</a></td>
+<td>defines the dimensions of an array</td>
+<td>no</td>
+</tr>
+<tr>
 <td><a href="../DimensionExpression/">DimensionExpression</a></td>
 <td>defines one of the dimensions of an array</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Element/">Element</a></td>
-<td>A named element in the model</td>
+<td><a href="../PatternExpression/">PatternExpression</a></td>
+<td>a regular expression pattern used to evaluate conformance of a string</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../TypeDefinition/">TypeDefinition</a></td>
-<td>an element that whose instances are atomic scalar values that can be mapped t...</td>
+<td><a href="../ImportExpression/">ImportExpression</a></td>
+<td>an expression describing an import</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../PermissibleValue/">PermissibleValue</a></td>
+<td>a permissible value, accompanied by intended text and an optional mapping to ...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../UniqueKey/">UniqueKey</a></td>
+<td>a collection of slots whose values uniquely identify an instance of a class</td>
 <td>no</td>
 </tr>
 <tr>
@@ -1085,56 +1135,6 @@ Alias: extensions</p>
 <tr>
 <td><a href="../Annotation/">Annotation</a></td>
 <td>a tag/value pair with the semantics of OWL Annotation</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Extensible/">Extensible</a></td>
-<td>mixin for classes that support extension</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../AnonymousExpression/">AnonymousExpression</a></td>
-<td>An abstract parent class for any nested expression</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../ClassRule/">ClassRule</a></td>
-<td>A rule that applies to instances of a class</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../PermissibleValue/">PermissibleValue</a></td>
-<td>a permissible value, accompanied by intended text and an optional mapping to ...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../AnonymousClassExpression/">AnonymousClassExpression</a></td>
-<td></td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../ImportExpression/">ImportExpression</a></td>
-<td>an expression describing an import</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../SubsetDefinition/">SubsetDefinition</a></td>
-<td>an element that can be used to group other metamodel elements</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Extension/">Extension</a></td>
-<td>a tag/value pair used to add non-model information to an entry</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../EnumBinding/">EnumBinding</a></td>
-<td>A binding of a slot or a class to a permissible value from an enumeration</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../SlotDefinition/">SlotDefinition</a></td>
-<td>an element that describes how instances are related to other instances</td>
 <td>no</td>
 </tr>
 </tbody>
@@ -1210,7 +1210,6 @@ description: a tag/text tuple attached to an arbitrary element
 from_schema: https://w3id.org/linkml/meta
 rank: 1000
 domain: extensible
-alias: extensions
 domain_of:
 - extension
 - extensible
@@ -1221,12 +1220,16 @@ inlined: true
 </code></pre>
 
 </details>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 

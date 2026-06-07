@@ -492,6 +492,7 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-pathexpression">Class: PathExpression</h1>
 <p><em>An expression that describes an abstract path from an object to another through a sequence of slot lookups</em></p>
+<div>
 <p>URI: <a href="https://w3id.org/linkml/PathExpression">linkml:PathExpression</a></p>
 <div class="mermaid"> classDiagram
     class PathExpression
@@ -1132,7 +1133,6 @@ attributes:
     description: in a sequential list, this indicates the next member
     from_schema: https://w3id.org/linkml/meta
     rank: 1000
-    alias: followed_by
     owner: path_expression
     domain_of:
     - path_expression
@@ -1149,7 +1149,6 @@ attributes:
     - sh:not
     rank: 105
     is_a: boolean_slot
-    alias: none_of
     owner: path_expression
     domain_of:
     - type_expression
@@ -1170,7 +1169,6 @@ attributes:
     - sh:or
     rank: 101
     is_a: boolean_slot
-    alias: any_of
     owner: path_expression
     domain_of:
     - type_expression
@@ -1191,7 +1189,6 @@ attributes:
     - sh:and
     rank: 107
     is_a: boolean_slot
-    alias: all_of
     owner: path_expression
     domain_of:
     - type_expression
@@ -1212,7 +1209,6 @@ attributes:
     - sh:xone
     rank: 103
     is_a: boolean_slot
-    alias: exactly_one_of
     owner: path_expression
     domain_of:
     - type_expression
@@ -1226,7 +1222,6 @@ attributes:
     description: true if the slot is to be inversed
     from_schema: https://w3id.org/linkml/meta
     rank: 1000
-    alias: reversed
     owner: path_expression
     domain_of:
     - path_expression
@@ -1236,7 +1231,6 @@ attributes:
     description: the slot to traverse
     from_schema: https://w3id.org/linkml/meta
     rank: 1000
-    alias: traverse
     owner: path_expression
     domain_of:
     - path_expression
@@ -1254,7 +1248,6 @@ attributes:
     status: testing
     rank: 1000
     domain: slot_expression
-    alias: range_expression
     owner: path_expression
     domain_of:
     - path_expression
@@ -1267,7 +1260,6 @@ attributes:
     from_schema: https://w3id.org/linkml/meta
     rank: 1000
     domain: extensible
-    alias: extensions
     owner: path_expression
     domain_of:
     - extension
@@ -1282,7 +1274,6 @@ attributes:
     rank: 1000
     is_a: extensions
     domain: annotatable
-    alias: annotations
     owner: path_expression
     domain_of:
     - annotatable
@@ -1304,7 +1295,6 @@ attributes:
     rank: 5
     domain: element
     slot_uri: skos:definition
-    alias: description
     owner: path_expression
     domain_of:
     - common_metadata
@@ -1321,7 +1311,6 @@ attributes:
     - alternate definitions
     rank: 1000
     domain: element
-    alias: alt_descriptions
     owner: path_expression
     domain_of:
     - common_metadata
@@ -1340,7 +1329,6 @@ attributes:
     rank: 3
     domain: element
     slot_uri: dcterms:title
-    alias: title
     owner: path_expression
     domain_of:
     - common_metadata
@@ -1358,7 +1346,6 @@ attributes:
     - owl:deprecated
     rank: 1000
     domain: element
-    alias: deprecated
     owner: path_expression
     domain_of:
     - common_metadata
@@ -1371,7 +1358,6 @@ attributes:
     from_schema: https://w3id.org/linkml/meta
     rank: 1000
     domain: element
-    alias: todos
     owner: path_expression
     domain_of:
     - common_metadata
@@ -1387,7 +1373,6 @@ attributes:
     rank: 1000
     domain: element
     slot_uri: skos:editorialNote
-    alias: notes
     owner: path_expression
     domain_of:
     - common_metadata
@@ -1405,7 +1390,6 @@ attributes:
     rank: 1000
     domain: element
     slot_uri: skos:note
-    alias: comments
     owner: path_expression
     domain_of:
     - common_metadata
@@ -1422,7 +1406,6 @@ attributes:
     rank: 1000
     singular_name: example
     domain: element
-    alias: examples
     owner: path_expression
     domain_of:
     - common_metadata
@@ -1442,7 +1425,6 @@ attributes:
     rank: 1000
     domain: element
     slot_uri: OIO:inSubset
-    alias: in_subset
     owner: path_expression
     domain_of:
     - common_metadata
@@ -1461,7 +1443,6 @@ attributes:
     domain: element
     slot_uri: skos:inScheme
     readonly: supplied by the schema loader or schema view
-    alias: from_schema
     owner: path_expression
     domain_of:
     - common_metadata
@@ -1474,7 +1455,6 @@ attributes:
     rank: 1000
     domain: element
     readonly: supplied by the schema loader or schema view
-    alias: imported_from
     owner: path_expression
     domain_of:
     - common_metadata
@@ -1497,7 +1477,6 @@ attributes:
     rank: 1000
     domain: element
     slot_uri: dcterms:source
-    alias: source
     owner: path_expression
     domain_of:
     - common_metadata
@@ -1511,7 +1490,6 @@ attributes:
     from_schema: https://w3id.org/linkml/meta
     rank: 1000
     slot_uri: schema:inLanguage
-    alias: in_language
     owner: path_expression
     domain_of:
     - common_metadata
@@ -1525,7 +1503,6 @@ attributes:
     rank: 1000
     domain: element
     slot_uri: rdfs:seeAlso
-    alias: see_also
     owner: path_expression
     domain_of:
     - common_metadata
@@ -1576,7 +1553,6 @@ attributes:
     rank: 1000
     domain: element
     slot_uri: skos:altLabel
-    alias: aliases
     owner: path_expression
     domain_of:
     - common_metadata
@@ -1591,7 +1567,6 @@ attributes:
     - linkml:aliases
     rank: 1000
     slot_uri: skosxl:altLabel
-    alias: structured_aliases
     owner: path_expression
     domain_of:
     - common_metadata
@@ -1612,7 +1587,6 @@ attributes:
     - alternate ids
     rank: 1000
     slot_uri: skos:mappingRelation
-    alias: mappings
     owner: path_expression
     domain_of:
     - common_metadata
@@ -1703,7 +1677,6 @@ attributes:
     rank: 1000
     domain: element
     slot_uri: pav:createdBy
-    alias: created_by
     owner: path_expression
     domain_of:
     - common_metadata
@@ -1717,7 +1690,6 @@ attributes:
     rank: 1000
     domain: element
     slot_uri: dcterms:contributor
-    alias: contributors
     owner: path_expression
     domain_of:
     - common_metadata
@@ -1732,7 +1704,6 @@ attributes:
     rank: 1000
     domain: element
     slot_uri: pav:createdOn
-    alias: created_on
     owner: path_expression
     domain_of:
     - common_metadata
@@ -1746,7 +1717,6 @@ attributes:
     rank: 1000
     domain: element
     slot_uri: pav:lastUpdatedOn
-    alias: last_updated_on
     owner: path_expression
     domain_of:
     - common_metadata
@@ -1760,7 +1730,6 @@ attributes:
     rank: 1000
     domain: element
     slot_uri: oslc:modifiedBy
-    alias: modified_by
     owner: path_expression
     domain_of:
     - common_metadata
@@ -1781,7 +1750,6 @@ attributes:
     rank: 1000
     domain: element
     slot_uri: bibo:status
-    alias: status
     owner: path_expression
     domain_of:
     - common_metadata
@@ -1805,7 +1773,6 @@ attributes:
     - qb:order
     rank: 51
     slot_uri: sh:order
-    alias: rank
     owner: path_expression
     domain_of:
     - common_metadata
@@ -1823,7 +1790,6 @@ attributes:
     rank: 1000
     singular_name: category
     slot_uri: dcterms:subject
-    alias: categories
     owner: path_expression
     domain_of:
     - common_metadata
@@ -1840,7 +1806,6 @@ attributes:
     singular_name: keyword
     domain: element
     slot_uri: schema:keywords
-    alias: keywords
     owner: path_expression
     domain_of:
     - common_metadata
@@ -1849,6 +1814,7 @@ attributes:
 
 </code></pre>
 </details>
+</div>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
